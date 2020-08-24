@@ -27,10 +27,19 @@ def insert_divider_in_x_row(x_row):
     return 'X' + divider + 'X'
 
 def style_x_pyramid(x_pyramid, base_len):
-    space_counter = base_len / 2
+    space_counter = base_len / 2  
     for key in sorted(x_pyramid.keys()):
         if len(x_pyramid[key]) > 2 and len(x_pyramid[key]) < base_len:
             x_pyramid[key] = insert_divider_in_x_row(x_pyramid[key])
         print ' ' * space_counter + x_pyramid[key]
         space_counter -= 1
+
+# invalid inputs
+draw_triangle('two')
+draw_triangle(2)
+
+# valid inputs
+draw_triangle()
 draw_triangle(5)
+draw_triangle(12)
+draw_triangle(20)
