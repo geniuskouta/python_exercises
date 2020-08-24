@@ -1,4 +1,4 @@
-def draw_triangle(base_len=3):
+def draw_triangle(base_len=5):
     error = validate_parameter(base_len)
     if error:
         print error 
